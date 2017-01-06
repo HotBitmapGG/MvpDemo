@@ -1,0 +1,77 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+    }
+    dependencies {
+        classpath 'me.tatarka:gradle-retrolambda:3.2.5'
+    }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "io.netopen.hotbitmapgg.demo"
+        minSdkVersion 22
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    //Android Libs
+    compile 'com.android.support:appcompat-v7:25.1.0'
+    compile 'com.android.support:cardview-v7:25.1.0'
+    compile 'com.android.support:design:25.1.0'
+
+    //Retrofit2
+    compile 'com.squareup.retrofit2:retrofit:2.0.2'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.1'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.1'
+
+    //OkHttp3
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.2.0'
+
+    //Rxjava
+    compile 'io.reactivex:rxandroid:1.2.0'
+    compile 'io.reactivex:rxjava:1.1.5'
+
+    //ButterKnife
+    compile 'com.jakewharton:butterknife:7.0.1'
+
+    //Rxbinding
+    compile 'com.jakewharton.rxbinding:rxbinding:1.0.0'
+    compile 'com.jakewharton.rxbinding:rxbinding-support-v4:1.0.0'
+    compile 'com.jakewharton.rxbinding:rxbinding-appcompat-v7:1.0.0'
+    compile 'com.jakewharton.rxbinding:rxbinding-design:1.0.0'
+    compile 'com.jakewharton.rxbinding:rxbinding-recyclerview-v7:1.0.0'
+    compile 'com.jakewharton.rxbinding:rxbinding-leanback-v17:1.0.0'
+
+    //RxLifeCycle
+    compile 'com.trello:rxlifecycle-components:1.0'
+
+    //Glide
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.github.bumptech.glide:okhttp3-integration:1.4.0@aar'
+
+
+}
