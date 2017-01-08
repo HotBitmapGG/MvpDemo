@@ -11,7 +11,7 @@ import java.util.List;
  * @HotBitmapGG
  */
 
-public interface IMainView {
+public interface IMeiziView {
 
   void showProgress();
 

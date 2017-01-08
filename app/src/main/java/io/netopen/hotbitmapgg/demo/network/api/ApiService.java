@@ -1,9 +1,9 @@
-package io.netopen.hotbitmapgg.demo.network;
+package io.netopen.hotbitmapgg.demo.network.api;
 
 import io.netopen.hotbitmapgg.demo.mvp.bean.MeiziInfo;
+import io.reactivex.Flowable;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
-import rx.Observable;
 
 /**
  * Created by hcc on 2017/1/4 13:09
@@ -16,6 +16,6 @@ import rx.Observable;
 public interface ApiService {
 
   @GET("data/福利/{pageSize}/{page}")
-  Observable<MeiziInfo> getMeiziInfos(
+  Flowable<MeiziInfo> getMeiziInfos(
       @Path("pageSize") int pageSize, @Path("page") int page);
 }

@@ -4,9 +4,9 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import io.netopen.hotbitmapgg.demo.R;
 import io.netopen.hotbitmapgg.demo.mvp.bean.MeiziInfo;
-import io.netopen.hotbitmapgg.demo.mvp.presenter.MainPresenterImpl;
-import io.netopen.hotbitmapgg.demo.mvp.ui.adapter.MainAdapter;
-import io.netopen.hotbitmapgg.demo.mvp.view.IMainView;
+import io.netopen.hotbitmapgg.demo.mvp.presenter.MeiziPresenterImpl;
+import io.netopen.hotbitmapgg.demo.mvp.ui.adapter.MeiziAdapter;
+import io.netopen.hotbitmapgg.demo.mvp.view.IMeiziView;
 import java.util.List;
 
 import android.os.Bundle;
@@ -16,11 +16,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ProgressBar;
 
-public class MainActivity extends AppCompatActivity implements IMainView {
+public class MeiziActivity extends AppCompatActivity implements IMeiziView {
 
   @Bind(R.id.recycler_view) RecyclerView mRecyclerView;
   @Bind(R.id.progress_bar) ProgressBar mProgressBar;
-  private MainAdapter mAdapter;
+  private MeiziAdapter mAdapter;
 
 
   @Override
@@ -31,11 +31,14 @@ public class MainActivity extends AppCompatActivity implements IMainView {
 
     initRecyclerView();
     initData();
+
+
+
   }
 
 
   private void initData() {
-    MainPresenterImpl mainPresenter = new MainPresenterImpl(this);
+    MeiziPresenterImpl mainPresenter = new MeiziPresenterImpl(this);
     mainPresenter.loadData();
   }
 
@@ -44,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements IMainView {
 
     mRecyclerView.setHasFixedSize(true);
     mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-    mAdapter = new MainAdapter();
+    mAdapter = new MeiziAdapter();
     mRecyclerView.setAdapter(mAdapter);
   }
 

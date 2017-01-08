@@ -18,7 +18,7 @@ import android.widget.ImageView;
  * @HotBitmapGG
  */
 
-public class MainAdapter extends AbsRecyclerViewAdapter<MeiziInfo.ResultsBean> {
+public class MeiziAdapter extends AbsRecyclerViewAdapter<MeiziInfo.ResultsBean> {
 
   @Override
   public ClickableViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {

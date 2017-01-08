@@ -8,7 +8,7 @@ package io.netopen.hotbitmapgg.demo.mvp.presenter;
  * @HotBitmapGG
  */
 
-public interface IMainPresenter {
+public interface IMeiziPresenter {
   
   void loadData();
 }

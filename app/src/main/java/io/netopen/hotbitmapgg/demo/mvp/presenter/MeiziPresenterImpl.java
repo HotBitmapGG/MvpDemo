@@ -1,11 +1,11 @@
 package io.netopen.hotbitmapgg.demo.mvp.presenter;
 
 import io.netopen.hotbitmapgg.demo.mvp.bean.MeiziInfo;
-import io.netopen.hotbitmapgg.demo.mvp.view.IMainView;
+import io.netopen.hotbitmapgg.demo.mvp.view.IMeiziView;
 import io.netopen.hotbitmapgg.demo.network.RetrofitHelper;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.schedulers.Schedulers;
 import java.util.concurrent.TimeUnit;
-import rx.android.schedulers.AndroidSchedulers;
-import rx.schedulers.Schedulers;
 
 /**
  * Created by hcc on 2017/1/4 13:25
@@ -15,12 +15,12 @@ import rx.schedulers.Schedulers;
  * @HotBitmapGG
  */
 
-public class MainPresenterImpl implements IMainPresenter {
+public class MeiziPresenterImpl implements IMeiziPresenter {
 
-  private IMainView mainView;
+  private IMeiziView mainView;
 
 
-  public MainPresenterImpl(IMainView mainView) {
+  public MeiziPresenterImpl(IMeiziView mainView) {
     this.mainView = mainView;
   }
 
@@ -29,17 +29,15 @@ public class MainPresenterImpl implements IMainPresenter {
 
     RetrofitHelper.createApiService()
         .getMeiziInfos(10, 1)
-        .doOnSubscribe(() -> mainView.showProgress())
+        .doOnSubscribe(subscription -> mainView.showProgress())
         .delay(1000, TimeUnit.MILLISECONDS)
         .filter(meiziInfo -> !meiziInfo.isError())
         .map(MeiziInfo::getResults)
         .subscribeOn(Schedulers.io())
         .observeOn(AndroidSchedulers.mainThread())
-        .subscribe(resultsBeen -> {
-          mainView.fillData(resultsBeen);
+        .subscribe(resultsBeans -> {
+          mainView.fillData(resultsBeans);
           mainView.hideProgress();
-        }, throwable -> {
-          mainView.hideProgress();
-        });
+        }, throwable -> mainView.hideProgress());
   }
 }
