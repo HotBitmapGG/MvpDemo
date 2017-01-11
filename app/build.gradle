@@ -47,7 +47,6 @@ dependencies {
     compile 'com.squareup.retrofit2:retrofit:2.0.2'
     compile 'com.squareup.retrofit2:converter-gson:2.0.1'
     compile 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
-    // compile 'com.squareup.retrofit2:adapter-rxjava:2.0.1'
 
     //OkHttp3
     compile 'com.squareup.okhttp3:okhttp:3.2.0'
@@ -59,17 +58,6 @@ dependencies {
 
     //ButterKnife
     compile 'com.jakewharton:butterknife:7.0.1'
-
-    //    //Rxbinding
-    //    compile 'com.jakewharton.rxbinding:rxbinding:1.0.0'
-    //    compile 'com.jakewharton.rxbinding:rxbinding-support-v4:1.0.0'
-    //    compile 'com.jakewharton.rxbinding:rxbinding-appcompat-v7:1.0.0'
-    //    compile 'com.jakewharton.rxbinding:rxbinding-design:1.0.0'
-    //    compile 'com.jakewharton.rxbinding:rxbinding-recyclerview-v7:1.0.0'
-    //    compile 'com.jakewharton.rxbinding:rxbinding-leanback-v17:1.0.0'
-
-    //    //RxLifeCycle
-    //    compile 'com.trello:rxlifecycle-components:1.0'
 
     //Glide
     compile 'com.github.bumptech.glide:glide:3.7.0'
