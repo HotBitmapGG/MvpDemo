@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Created by hcc on 2017/1/4 16:45
  * 100332338@qq.com
- * Demo
+ * 妹子图模型类
  *
  * @HotBitmapGG
  */

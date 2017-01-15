@@ -19,7 +19,7 @@ import android.widget.ImageView;
 /**
  * Created by hcc on 2017/1/8 16:45
  * 100332338@qq.com
- * MvpDemo
+ * 妹子图高清大图界面
  *
  * @HotBitmapGG
  */

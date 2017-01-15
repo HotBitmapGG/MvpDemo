@@ -18,4 +18,6 @@ public interface IMeiziView {
   void hideProgress();
 
   void fillData(List<MeiziInfo.ResultsBean> resultsBeanList);
+
+  void loadMoreData(int page, int pageNum, List<MeiziInfo.ResultsBean> resultsBeanList);
 }
