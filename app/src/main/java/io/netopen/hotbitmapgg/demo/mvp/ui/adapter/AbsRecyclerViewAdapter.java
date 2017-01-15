@@ -8,11 +8,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 /**
- * Created by hcc on 2016/12/16 14:36
+ * Created by hcc on 2017/2/13 14:36
  * 100332338@qq.com
- * FrescoDemo
+ * RecyclerView基类
  *
- * @HotBitmapGG RecyclerView基类
+ * @HotBitmapGG
  */
 public abstract class AbsRecyclerViewAdapter<T>
     extends RecyclerView.Adapter<AbsRecyclerViewAdapter.ClickableViewHolder> {

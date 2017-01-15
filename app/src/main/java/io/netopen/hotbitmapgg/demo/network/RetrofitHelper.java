@@ -20,7 +20,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 /**
  * Created by hcc on 2017/1/4 13:13
  * 100332338@qq.com
- * Demo
+ * retrofit帮助类
  *
  * @HotBitmapGG
  */

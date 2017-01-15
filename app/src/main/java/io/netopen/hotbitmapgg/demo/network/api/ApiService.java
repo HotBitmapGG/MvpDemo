@@ -8,7 +8,7 @@ import retrofit2.http.Path;
 /**
  * Created by hcc on 2017/1/4 13:09
  * 100332338@qq.com
- * Demo
+ * 妹子Api请求接口
  *
  * @HotBitmapGG
  */

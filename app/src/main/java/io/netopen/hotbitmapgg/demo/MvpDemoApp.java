@@ -5,7 +5,7 @@ import android.app.Application;
 /**
  * Created by hcc on 2017/1/8 15:57
  * 100332338@qq.com
- * MvpDemo
+ * MvpDemoApp
  *
  * @HotBitmapGG
  */

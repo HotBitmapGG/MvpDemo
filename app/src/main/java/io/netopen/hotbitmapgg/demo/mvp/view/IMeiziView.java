@@ -6,7 +6,8 @@ import java.util.List;
 /**
  * Created by hcc on 2017/1/4 13:24
  * 100332338@qq.com
- * Demo
+ * MVP架构View层接口
+ * 主要是定义了跟UI交互的方法
  *
  * @HotBitmapGG
  */

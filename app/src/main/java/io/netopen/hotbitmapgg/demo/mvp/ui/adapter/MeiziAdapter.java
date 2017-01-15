@@ -13,7 +13,7 @@ import android.widget.ImageView;
 /**
  * Created by hcc on 2017/1/4 13:37
  * 100332338@qq.com
- * Demo
+ * 妹子图列表Adapter
  *
  * @HotBitmapGG
  */
