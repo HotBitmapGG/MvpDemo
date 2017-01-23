@@ -13,9 +13,9 @@ import android.net.NetworkInfo;
  *
  * @HotBitmapGG
  */
-public class NetworkUtil {
+public class NetWorkUtil {
 
-  private NetworkUtil() {
+  private NetWorkUtil() {
 
   }
 

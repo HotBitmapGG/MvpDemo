@@ -3,7 +3,7 @@ package io.netopen.hotbitmapgg.demo.network;
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import io.netopen.hotbitmapgg.demo.MvpDemoApp;
 import io.netopen.hotbitmapgg.demo.network.api.ApiService;
-import io.netopen.hotbitmapgg.demo.utils.NetworkUtil;
+import io.netopen.hotbitmapgg.demo.utils.NetWorkUtil;
 import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -90,7 +90,7 @@ public class RetrofitHelper {
       // 无网络时，设置超时为1天
       int maxStale = 60 * 60 * 24;
       Request request = chain.request();
-      if (NetworkUtil.isNetworkConnected()) {
+      if (NetWorkUtil.isNetworkConnected()) {
         //有网络时只从网络获取
         request = request.newBuilder()
             .cacheControl(CacheControl.FORCE_NETWORK)
@@ -102,7 +102,7 @@ public class RetrofitHelper {
             .build();
       }
       Response response = chain.proceed(request);
-      if (NetworkUtil.isNetworkConnected()) {
+      if (NetWorkUtil.isNetworkConnected()) {
         response = response.newBuilder()
             .removeHeader("Pragma")
             .header("Cache-Control", "public, max-age=" + maxAge)
