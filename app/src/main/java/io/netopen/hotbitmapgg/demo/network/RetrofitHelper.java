@@ -3,6 +3,7 @@ package io.netopen.hotbitmapgg.demo.network;
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import io.netopen.hotbitmapgg.demo.MvpDemoApp;
 import io.netopen.hotbitmapgg.demo.network.api.ApiService;
+import io.netopen.hotbitmapgg.demo.network.api.GithubService;
 import io.netopen.hotbitmapgg.demo.utils.NetWorkUtil;
 import java.io.File;
 import java.io.IOException;
@@ -31,6 +32,8 @@ public class RetrofitHelper {
 
   private static final String BASE_URL = "http://gank.io/api/";
 
+  private static final String BASE_GITHUB_URL = "https://api.github.com/";
+
 
   static {
     initOkHttpClient();
@@ -46,6 +49,16 @@ public class RetrofitHelper {
         .build();
 
     return retrofit.create(ApiService.class);
+  }
+
+
+  public static GithubService createGithubService() {
+    Retrofit retrofit = new Retrofit.Builder()
+        .baseUrl(BASE_GITHUB_URL)
+        .addConverterFactory(GsonConverterFactory.create())
+        .build();
+
+    return retrofit.create(GithubService.class);
   }
 
 

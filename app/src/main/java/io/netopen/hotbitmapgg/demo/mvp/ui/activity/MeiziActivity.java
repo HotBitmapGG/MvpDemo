@@ -11,6 +11,7 @@ import io.netopen.hotbitmapgg.demo.mvp.view.IMeiziView;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -55,6 +56,11 @@ public class MeiziActivity extends AppCompatActivity implements IMeiziView {
   private void initToolBar() {
     //设置toolBar的标题
     mToolbar.setTitle(getResources().getString(R.string.app_name));
+    mToolbar.setOnClickListener(new View.OnClickListener() {
+      @Override public void onClick(View view) {
+        startActivity(new Intent(MeiziActivity.this, GitHubUserActivity.class));
+      }
+    });
   }
 
 

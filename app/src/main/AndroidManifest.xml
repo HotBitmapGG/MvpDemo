@@ -25,6 +25,10 @@
             android:name=".mvp.ui.activity.MeiziDetailsActivity"
             android:screenOrientation="portrait"/>
 
+        <activity
+            android:name=".mvp.ui.activity.GitHubUserActivity"
+            android:screenOrientation="portrait"/>
+
     </application>
 
 </manifest>
