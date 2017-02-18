@@ -3,7 +3,7 @@ package io.netopen.hotbitmapgg.demo.network;
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import io.netopen.hotbitmapgg.demo.MvpDemoApp;
 import io.netopen.hotbitmapgg.demo.network.api.ApiService;
-import io.netopen.hotbitmapgg.demo.network.api.GithubService;
+import io.netopen.hotbitmapgg.demo.network.api.GitHubService;
 import io.netopen.hotbitmapgg.demo.utils.NetWorkUtil;
 import java.io.File;
 import java.io.IOException;
@@ -52,13 +52,13 @@ public class RetrofitHelper {
   }
 
 
-  public static GithubService createGithubService() {
+  public static GitHubService createGitHubService() {
     Retrofit retrofit = new Retrofit.Builder()
         .baseUrl(BASE_GITHUB_URL)
         .addConverterFactory(GsonConverterFactory.create())
         .build();
 
-    return retrofit.create(GithubService.class);
+    return retrofit.create(GitHubService.class);
   }
 
 

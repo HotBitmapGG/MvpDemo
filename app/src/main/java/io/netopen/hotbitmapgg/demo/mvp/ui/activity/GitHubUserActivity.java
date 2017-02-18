@@ -32,7 +32,7 @@ public class GitHubUserActivity extends AppCompatActivity {
     setContentView(R.layout.activity_user);
     ButterKnife.bind(this);
 
-    RetrofitHelper.createGithubService()
+    RetrofitHelper.createGitHubService()
         .getUserInfo("Guolei1130")
         .enqueue(new Callback<UserInfo>() {
           @Override public void onResponse(Call<UserInfo> call, Response<UserInfo> response) {
@@ -44,5 +44,11 @@ public class GitHubUserActivity extends AppCompatActivity {
             tv.setText(t.getMessage());
           }
         });
+
+
+
   }
+
+
+
 }

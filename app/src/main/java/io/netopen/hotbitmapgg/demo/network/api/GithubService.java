@@ -13,7 +13,7 @@ import retrofit2.http.Path;
  * @HotBitmapGG
  */
 
-public interface GithubService {
+public interface GitHubService {
 
   @GET("users/{name}")
   Call<UserInfo> getUserInfo(@Path("name") String name);
