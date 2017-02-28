@@ -44,11 +44,5 @@ public class GitHubUserActivity extends AppCompatActivity {
             tv.setText(t.getMessage());
           }
         });
-
-
-
   }
-
-
-
 }
