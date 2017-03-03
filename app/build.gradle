@@ -5,13 +5,13 @@ buildscript {
     }
     dependencies {
         classpath 'me.tatarka:gradle-retrolambda:3.2.5'
-        classpath 'org.greenrobot:greendao-gradle-plugin:3.0.0'
+        //classpath 'org.greenrobot:greendao-gradle-plugin:3.0.0'
     }
 }
 
 apply plugin: 'com.android.application'
 apply plugin: 'me.tatarka.retrolambda'
-apply plugin: 'org.greenrobot.greendao'
+//apply plugin: 'org.greenrobot.greendao'
 
 android {
     compileSdkVersion 25
@@ -37,11 +37,11 @@ android {
     }
 }
 
-greendao {
-    schemaVersion 1
-    daoPackage 'com.hcc.greendao.gen'
-    targetGenDir 'src/main/java'
-}
+//greendao {
+//    schemaVersion 1
+//    daoPackage 'com.hcc.greendao.gen'
+//    targetGenDir 'src/main/java'
+//}
 
 dependencies {
 
@@ -72,6 +72,6 @@ dependencies {
     compile 'com.github.bumptech.glide:okhttp3-integration:1.4.0@aar'
 
     //greenDao
-    compile'org.greenrobot:greendao:3.0.1'
-    compile'org.greenrobot:greendao-generator:3.0.0'
+//    compile'org.greenrobot:greendao:3.0.1'
+//    compile'org.greenrobot:greendao-generator:3.0.0'
 }
